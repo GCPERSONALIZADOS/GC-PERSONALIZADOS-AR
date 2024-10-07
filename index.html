@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma RA Arte con AR.js</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Incluir AR.js desde la CDN -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Realidad Aumentada para Arte con AR.js</h1>
+    </header>
+
+    <!-- Escena de realidad aumentada -->
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+        
+        <!-- Marcador predefinido "hiro" -->
+        <a-marker preset="hiro">
+            <a-box position="0 0.5 0" material="color: blue;"></a-box>
+        </a-marker>
+
+        <!-- Cámara -->
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    <script src="script.js"></script>
+</body>
+</html>
